@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
 
-      < FunctionComponent /> <br /><br />
+      < FunctionComponent />
       <NewComponent />
     </div>
 
