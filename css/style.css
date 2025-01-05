@@ -4,7 +4,7 @@ header {
 }
 
 
-.header-text {
+.header-text, footer {
     color: aquamarine;
     text-align: center;
 }
@@ -17,3 +17,14 @@ header {
     color: grey;
     font-style: italic;
 }
+
+
+footer {
+    background-color: blueviolet;
+}
+
+
+
+
+
+
