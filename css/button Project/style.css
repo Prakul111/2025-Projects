@@ -12,7 +12,7 @@
 
 }
 
-.btn:hover{
+.btn:hover, .btn:focus{
     background-color: hsl(0, 0%, 80%);
     box-shadow: 0 0 5px hsl(0, 0%, 70%);
 }
