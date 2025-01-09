@@ -3,9 +3,16 @@
 }
 
 .btn{
-    background: #E6E6E6;
-    border: none;
+    background: hsl(0, 0%, 90%);
+    border: 10x solid hsl(0, 0%, 70%);
     outline: none;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-radius: .3em;
 
+}
 
+.btn:hover{
+    background-color: hsl(0, 0%, 80%);
+    box-shadow: 0 0 5px hsl(0, 0%, 70%);
 }
