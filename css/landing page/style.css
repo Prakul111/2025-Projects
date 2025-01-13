@@ -98,3 +98,58 @@ body{
     bottom: 1rem;
     width: 40px;
 }
+
+
+.section{
+    padding: 2rem;
+}
+
+.section-title{
+    margin: 0;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+}
+
+.ciriculum-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 450px));
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 50px;
+}
+
+.ciriculum-grid-item{
+    display: flex;
+    align-items: center;
+
+
+}
+
+.ciriculum-grid-item img{
+    width: 50px;
+    margin-right: 1rem;
+}
+
+
+.section-accent{
+    background-color: #0af;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.free-title{
+    color: white;
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.free-subtitle{
+    color: white;
+    max-width: 300px;
+    
+}
