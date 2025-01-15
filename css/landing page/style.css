@@ -153,24 +153,10 @@ body{
 
 .section-accent{
     background-color: #0af;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   
 }
 
-.free-title{
-    color: white;
-    margin: 0;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-}
 
-.free-subtitle{
-    color: white;
-    max-width: 300px;
-    
-}
 
 .form{
     max-width: 900px;
@@ -213,4 +199,106 @@ body{
     border-radius: .3em;
 }
 
+.pricing-cards-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.pricing-cards{
+    padding: 1rem;
+    background-color: #dcf4ff;
+    border: 1px solid black;
+    border-radius: .3em;
+    margin: 1rem 0;
+}
+
+.pricing-cards.accent{
+    background-color: white;
+    margin: 0;
+}
+
+
+.pricing-cards:first-child{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+.pricing-cards:last-child{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}
+
+.pricing-heder{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.plan-name{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.plan-price{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.plan-price::after{
+    content: '/mo';
+    font-size: .75rem;
+    color: #777;
+}
+
+.features{
+    margin-bottom: .5rem;
+}
+
+.features.inactive{
+    color: #777;
+    text-decoration: line-through;
+}
+
+.features:last-child{
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 700px){
+    
+    .ciriculum-grid{
+        grid-template-columns: minmax(auto,450px);
+        row-gap: 30px;
+    }
+
+    .full-screen-header{
+        background-position-x: 65%;
+    }
+    .pricing-cards-container{
+        flex-wrap: wrap;
+    }
+
+    .pricing-cards ,
+    .pricing-cards.accent{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1rem ;
+    }
+
+    .pricing-cards:first-child,
+    .pricing-cards:last-child{
+        border-radius: .3em;
+        border-radius: .3em;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+    }
+    .pricing-cards:last-child{
+        margin-bottom: 0;
+    }
+    .features.inactive{
+        display: none;
+    }
+}
 
