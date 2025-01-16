@@ -1,0 +1,87 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+     
+}
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+ }
+
+ .btn{
+    background-color: aqua;
+    border: none;
+    outline: none;
+    padding: .5em 1em;
+    border-radius: .3em;
+    cursor: pointer;
+    position: absolute;
+ }
+
+
+.btn-loading::after {
+    content: 'Loading';
+    position: absolute;
+    transform: translateY(200%);
+    left: 0;
+    bottom: 0;
+    animation: loading 2s linear forwards;
+}
+
+@keyframes loading {
+    0% {
+        
+    }
+
+    10% {
+        content: 'Loading.';
+    }
+
+    20% {
+        content: 'Loading..';
+        
+    }
+    
+    30% {
+        content: 'Loading...';
+        
+    }
+
+    40% {
+        content: 'Loading..';
+        
+    }
+
+    50% {
+        content: 'Loading.';
+        
+    }
+
+    60% {
+        content: 'Loading';
+        
+    }
+
+    70% {
+        content: 'Loading.';
+        
+    }
+
+    80% {
+        content: 'Loading..';
+        
+    }
+
+    90% {
+        content: 'Loading...';
+        
+    }
+
+    100% {
+        content: 'Loaded';
+        
+    }
+}
+
