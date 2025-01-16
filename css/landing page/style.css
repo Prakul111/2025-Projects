@@ -57,6 +57,8 @@ body{
     text-decoration: none;
     margin-left: 1rem;
     color: white;
+
+    transition: 100ms;
 }
 
 .nav-list a:hover{
@@ -97,6 +99,8 @@ body{
     border-radius: 10000000px;
     padding: .25em 1em;
     font-size: inherit;
+
+    transition: 100ms;
 }
 
 .btn:hover, .btn:focus{
@@ -111,10 +115,19 @@ body{
 }
 
 
+.btn.btn-learn-more:hover{
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px 1px gray;
+    
+
+}
+
 .scroll-down-icon{
     position: absolute;
     bottom: 1rem;
     width: 40px;
+
+    animation: scroll-down-bounce 1s alternate infinite linear;
 }
 
 
@@ -136,6 +149,7 @@ body{
     justify-content: center;
     row-gap: 10px;
     column-gap: 50px;
+    
 }
 
 .ciriculum-grid-item{
@@ -143,6 +157,10 @@ body{
     align-items: center;
 
 
+}
+
+.ciriculum-grid-item:hover img {
+    animation: shake 100ms;
 }
 
 .ciriculum-grid-item img{
@@ -178,6 +196,8 @@ body{
     padding: .5em;
     color: inherit;
     font-family: inherit;
+
+    transition: border-color 100ms;
 }
 
 .form textarea{
@@ -211,6 +231,13 @@ body{
     border: 1px solid black;
     border-radius: .3em;
     margin: 1rem 0;
+
+
+    transition: 100ms;
+}
+
+.pricing-cards:hover{
+    transform: scale(1.05);
 }
 
 .pricing-cards.accent{
@@ -223,12 +250,17 @@ body{
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-right: none;
+
+    transform-origin: right;
 }
 
 .pricing-cards:last-child{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-left: none;
+
+    transform-origin: left;
+
 }
 
 .pricing-heder{
@@ -265,6 +297,27 @@ body{
     margin-bottom: 0;
 }
 
+@keyframes scroll-down-bounce{
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+
+    }
+}
+
+@keyframes shake {
+    25% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+
+    }
+}
 
 @media (max-width: 700px){
     
@@ -293,6 +346,8 @@ body{
         border-radius: .3em;
         border-right: 1px solid black;
         border-left: 1px solid black;
+
+        transform-origin: center;
     }
     .pricing-cards:last-child{
         margin-bottom: 0;
@@ -301,4 +356,22 @@ body{
         display: none;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
