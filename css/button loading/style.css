@@ -21,10 +21,14 @@
  }
 
 
-.btn-loading::after {
+.btn-loading:focus:after {
+
+    --default-transform: translateY(200%);
+
     content: 'Loading';
     position: absolute;
-    transform: translateY(200%);
+    transform: var(--default-transform);
+    transform-origin: center;
     left: 0;
     bottom: 0;
     animation: loading 2s linear forwards;
@@ -32,7 +36,7 @@
 
 @keyframes loading {
     0% {
-        
+        opacity: 1;
     }
 
     10% {
@@ -42,6 +46,10 @@
     20% {
         content: 'Loading..';
         
+    }
+
+    25% {
+        transform: var(--default-transform) rotate(30deg);
     }
     
     30% {
@@ -56,6 +64,9 @@
 
     50% {
         content: 'Loading.';
+        opacity: .6;
+        transform: var(--default-transform) rotate(0deg);
+
         
     }
 
@@ -67,6 +78,11 @@
     70% {
         content: 'Loading.';
         
+    }
+
+    75% {
+        transform:  var(--default-transform) rotate(-30deg);
+
     }
 
     80% {
@@ -81,6 +97,8 @@
 
     100% {
         content: 'Loaded';
+        opacity: 1;
+        transform: var(--default-transform) rotate(0deg);
         
     }
 }
