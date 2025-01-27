@@ -6,8 +6,6 @@ function sumOfTwo(x, y) {
 }
 
 sumOfTwo(3, 2)
+kjbhj
+jbjhjg
 
-ldjhgkjdf
-debuggerb
-dispatchEventdsf
-dfs
