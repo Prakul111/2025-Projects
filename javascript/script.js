@@ -1,11 +1,14 @@
-
-function sumOfTwo(x, y) {
-    const sum = x + y;
-    console.log(sum);
-
+function person1(name) {
+    return "Hello " + name
 }
 
-sumOfTwo(3, 2)
-kjbhj
-jbjhjg
+let result = person1('launda')
+console.log(result);
+
+
+function print(variable) {
+    console.log(variable)
+}
+
+console.log(print)
 
