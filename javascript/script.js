@@ -1,10 +1,4 @@
-
-let person = {
-    name: "slkjdn",
-    age: 32,
-    description: "what to pdo"
-}
-
-console.log(person.age);
-
+const form = document.querySelector('#new-item-form')
+const list = document.querySelector('#list')
+const input = document.querySelector('#item-input')
 

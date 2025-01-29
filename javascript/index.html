@@ -4,17 +4,17 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Javascript Practise</title>
-		<script src="script.js"></script>
+		<script src="script.js" defer></script>
 	</head>
 	<body>
-		<header id="header">
-			<nav>
-				<ul>
-					<a href="#"><li>Item 1</li></a>
-					<a href="#"><li>Item 1</li></a>
-					<a href="#"><li>Item 1</li></a>
-				</ul>
-			</nav>
-		</header>
+		<div id="list">
+			<div class="list-item">Wash Dishes</div>
+		</div>
+
+		<form id="new-item-form">
+			<label for="item-input"> New Item</label>
+			<input type="text" id="item-input" />
+			<button type="submit">Add Item</button>
+		</form>
 	</body>
 </html>
