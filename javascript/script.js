@@ -46,5 +46,3 @@ function getItems(id) {
 
 console.log(getItems(1));
 
-
-
