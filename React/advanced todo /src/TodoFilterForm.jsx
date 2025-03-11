@@ -1,5 +1,5 @@
 
-export function TodoFilterForm({ name, setName }) {
+export function TodoFilterForm({ name, setName, hideCompleted, setHideCompleted }) {
     return (
         <div className="filter-form">
             <div className="filter-form-group">
@@ -13,7 +13,8 @@ export function TodoFilterForm({ name, setName }) {
             <label>
                 <input
                     type="checkbox"
-                    id="name"
+                    checked={hideCompleted}
+                    onChange={e => setHideCompleted(e.target.checked)}
                 />
                 Hide Completed
             </label>

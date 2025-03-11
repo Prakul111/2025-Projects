@@ -30,6 +30,13 @@ function reducer(todos, { type, payload }) {
       })
     case ACTIONS.DELETE:
       return todos.filter(todo => todo.id !== payload.id)
+    case ACTIONS.UPDATE:
+      return todos.map(todo => {
+        if (todo.id === payload.id) {
+          return { ...todo, name: payload.name }
+        }
+        return todo
+      })
     default:
       throw new Error(`No Action Found For ${type}.`)
   }
@@ -38,6 +45,7 @@ export const TodoContext = createContext()
 
 function App() {
   const [filterName, setFilterName] = useState("")
+  const [hideCompletedFilter, sethideCompletedFilter] = useState(false)
   const [todos, dispatch] = useReducer(reducer, [], (initialValue) => {
     const value = localStorage.getItem(LOCAL_STORAGE_KEY)
     if (value === null) return initialValue
@@ -46,6 +54,7 @@ function App() {
   })
 
   const filterTodos = todos.filter((todo) => {
+    if (hideCompletedFilter && todo.completed) return false
     return todo.name.includes(filterName)
   })
 
@@ -63,8 +72,10 @@ function App() {
   function toggleTodo(todoId, completed) {
     dispatch({ type: ACTIONS.TOGGLE, payload: { id: todoId, completed } })
 
+  }
 
-
+  function updateTodoName(id, name) {
+    dispatch({ type: ACTIONS.UPDATE, payload: { id, name } })
   }
 
   function deleteTodo(todoId) {
@@ -78,10 +89,12 @@ function App() {
         todos: filterTodos,
         addNewTodo,
         toggleTodo,
-        deleteTodo
+        deleteTodo,
+        updateTodoName
       }}>
 
-      <TodoFilterForm name={filterName} setName={setFilterName} />
+      <TodoFilterForm name={filterName} setName={setFilterName}
+        hideCompleted={hideCompletedFilter} setHideCompleted={sethideCompletedFilter} />
       <TodoList />
       <NewTodoForm />
     </TodoContext.Provider>
